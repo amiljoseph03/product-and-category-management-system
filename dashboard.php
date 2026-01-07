@@ -1,4 +1,21 @@
-<?php include 'config/db.php';
+<?php
+include 'config/db.php';
+
+if(!isset($_SESSION['user'])){
+    header("Location: auth/login.php");
+    exit();
+}
+
+header("Cache-Control: no-store, no-cache, must-revalidate, max-age=0");
+header("Cache-Control: post-check=0, pre-check=0", false);
+header("Pragma: no-cache");
+header("Expires: 0");
+?>
+
+
+
+<?php 
+// include 'config/db.php';
 
 $totalCats = $pdo->query("SELECT COUNT(*) FROM categories")->fetchColumn();
 $totalPro = $pdo->query("SELECT COUNT(*) FROM products")->fetchColumn();
@@ -94,7 +111,7 @@ Inactive Products: <?= $inactive ?><br> -->
     <div class="row g-4">
 
 
-<div class="col-md-4">
+<div class="col-md-3">
     <div class="dashboard-card p-4 text-white" style="background: linear-gradient(135deg, #1dc5bf, #0bbcd6);">
         <div class="d-flex justify-content-between align-items-center">
             <div>
@@ -108,8 +125,8 @@ Inactive Products: <?= $inactive ?><br> -->
 
 
    
-        <div class="col-md-4">
-            <div class="dashboard-card p-4">
+        <div class="col-md-3">
+            <div class="dashboard-card p-4 text-white"style="background: linear-gradient(135deg, #1dc5bf, #0bbcd6);">
                 <div class="d-flex justify-content-between align-items-center">
                     <div>
                         <h6 class="text-muted">Total Products</h6>
@@ -121,8 +138,8 @@ Inactive Products: <?= $inactive ?><br> -->
         </div>
 
       
-        <div class="col-md-4">
-            <div class="dashboard-card p-4">
+        <div class="col-md-3 ">
+            <div class="dashboard-card p-4 text-white" style="background: linear-gradient(135deg, #1dc5bf, #0bbcd6);">
                 <div class="d-flex justify-content-between align-items-center">
                     <div>
                         <h6 class="text-muted">Active Products</h6>
@@ -133,8 +150,8 @@ Inactive Products: <?= $inactive ?><br> -->
             </div>
         </div>
 
-        <div class="col-md-4">
-            <div class="dashboard-card p-4">
+        <div class="col-md-3 ">
+            <div class="dashboard-card p-4 text-white"  style="background: linear-gradient(135deg, #1dc5bf, #0bbcd6);">
                 <div class="d-flex justify-content-between align-items-center">
                     <div>
                         <h6 class="text-muted">Inactive Products</h6>

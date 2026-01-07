@@ -11,11 +11,14 @@ if(isset($_POST['login'])){
     $stmt = $pdo->prepare("SELECT * FROM users WHERE username=? AND password=?");
     $stmt->execute([$u,$p]);
 
-    if($stmt->rowCount()){
-        $_SESSION['user'] = $u;
-        header("Location:../dashboard.php");
-        exit();
-    } else {
+   if($stmt->rowCount()){
+    session_regenerate_id(true); 
+    $_SESSION['user'] = $u;
+
+    header("Location:../dashboard.php");
+    exit();
+}
+ else {
         $error = "Invalid username or password";
     }
 }
