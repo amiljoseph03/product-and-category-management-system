@@ -34,6 +34,8 @@ Inactive Products: <?= $inactive ?><br> -->
 <meta charset="UTF-8">
 <title>Dashboard</title>
 
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
 
@@ -55,6 +57,19 @@ Inactive Products: <?= $inactive ?><br> -->
 </head>
 
 <body class="bg-light">
+
+<?php if(isset($_SESSION['login_success'])): ?>
+<script>
+Swal.fire({
+  title: "Login Successful...!",
+  text: "Welcome back, <?= htmlspecialchars($_SESSION['user']) ?>",
+  icon: "success",
+  timer: 3000,
+  showConfirmButton: false
+});
+</script>
+<?php unset($_SESSION['login_success']); endif; ?>
+
 
 
 <nav class="navbar navbar-dark bg-dark">

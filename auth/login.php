@@ -15,6 +15,8 @@ if(isset($_POST['login'])){
     session_regenerate_id(true); 
     $_SESSION['user'] = $u;
 
+    $_SESSION['login_success'] = true;  
+
     header("Location:../dashboard.php");
     exit();
 }
