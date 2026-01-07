@@ -38,7 +38,7 @@
 <ul class="navbar-nav ms-auto">
 <li class="nav-item"><a class="nav-link" href="#features">Features</a></li>
 <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-<li class="nav-item"><a class="nav-link btn btn-primary text-white ms-2" href="login.php">Login</a></li>
+<li class="nav-item"><a class="nav-link btn btn-primary text-white ms-2" href="auth/login.php">Login</a></li>
 </ul>
 </div>
 </div>
@@ -49,7 +49,7 @@
 <div class="container">
 <h1 class="display-4 fw-bold">Product & Category Management System</h1>
 <p class="lead mt-3">Manage your products, categories, and inventory efficiently.</p>
-<a href="login.php" class="btn btn-warning btn-lg mt-4">Get Started</a>
+<a href="auth/login.php" class="btn btn-warning btn-lg mt-4">Get Started</a>
 </div>
 </section>
 
