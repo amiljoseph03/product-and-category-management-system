@@ -13,7 +13,7 @@ if(isset($_POST['login'])){
 
     if($stmt->rowCount()){
         $_SESSION['user'] = $u;
-        header("Location: ../dashboard.php");
+        header("Location:../dashboard.php");
         exit();
     } else {
         $error = "Invalid username or password";
