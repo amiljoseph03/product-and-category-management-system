@@ -31,6 +31,23 @@ if(isset($_POST['save'])){
 
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
 <style>
+    body {
+    background: url("https://i.pinimg.com/736x/bd/dd/1f/bddd1f8fdd4935d3f1dd9e33245e93b6.jpg") no-repeat center center fixed;
+    background-size: cover;
+    position: relative;
+}
+
+/* dark overlay for readability */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.55);
+    z-index: -1;
+}
+
     #preview {
         width: 100%;
         max-height: 300px;

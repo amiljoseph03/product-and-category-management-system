@@ -67,7 +67,7 @@ body{
 <input type="password" name="password" class="form-control" placeholder="Enter password" required>
 </div>
 
-<button type="submit" name="login" class="btn btn-primary w-100">Login</button>
+<button type="submit" name="login" class="btn w-100" style="background-color: #1dc5bfff;">Login</button>
 </form>
 
 </div>

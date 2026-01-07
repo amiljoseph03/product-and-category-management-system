@@ -38,6 +38,23 @@ if(isset($_POST['save'])){
 <title>Add Product</title>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
 <style>
+
+        body {
+    background: url("https://i.pinimg.com/736x/43/9f/91/439f916713099e22875bb3702556ef62.jpg") no-repeat center center fixed;
+    background-size: cover;
+    position: relative;
+}
+
+/* dark overlay for readability */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.55);
+    z-index: -1;
+}
     #preview {
         width: 100%;
         max-height: 300px;

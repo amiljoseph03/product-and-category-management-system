@@ -30,16 +30,22 @@ $cats = $pdo->query("SELECT * FROM categories")->fetchAll();
 
 <div class="container table-container">
     <div class="d-flex justify-content-between align-items-center mb-3">
-        <h2>Category List</h2>
-        <a href="add.php" class="btn btn-success">Add New Category</a>
+        <h2 class="mb-0">Category List</h2>
+
+        <div class="btn-group gap-3">
+            <a href="add.php" class="btn btn-success">Add New Category</a>
+            <a href="../dashboard.php" class="btn text-white"style="background-color: #1dc5bfff;">Back</a>
+
+        </div>
     </div>
+
     
     <div class="card shadow-sm">
         <div class="card-body">
             <table class="table table-bordered table-hover table-striped align-middle text-center">
                 <thead class="table-dark">
                     <tr>
-                        <th>ID</th>
+                        <!-- <th>ID</th> -->
                         <th>Name</th>
                         <th>Image</th>
                         <th>Status</th>
@@ -49,8 +55,8 @@ $cats = $pdo->query("SELECT * FROM categories")->fetchAll();
                 <tbody>
                     <?php foreach($cats as $c): ?>
                     <tr>
-                        <td><?= $c['id'] ?></td>
-                        <td><?= htmlspecialchars($c['name']) ?></td>
+                        <!-- <td><?= $c['id'] ?></td> -->
+                        <td  class="text-start ps-5 fw-semibold"><?= htmlspecialchars($c['name']) ?></td>
                         <td>
                             <?php if(!empty($c['image']) && file_exists("../uploads/".$c['image'])): ?>
                                 <img src="../uploads/<?= $c['image'] ?>" alt="<?= htmlspecialchars($c['name']) ?>" class="img-thumb">
